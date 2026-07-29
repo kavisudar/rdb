@@ -1,31 +1,30 @@
 import { SceneConfig, SceneId, SkillItem, ProjectItem, TimelineStation, TestimonialItem, AgencyService } from '../types';
 
 export const AGENCY_INFO = {
-  name: "RD Bytes",
+  name: "Raga Designers",
   tagline: "Next-Gen 3D Spatial Web, AI Systems & Digital Product Agency",
   description: "We are an elite creative technology agency crafting immersive 3D WebGL web applications, custom full-stack SaaS client products, and intelligent multi-modal AI systems for industry pioneers.",
   location: "Chennai, IN",
   availableForHire: true,
   stats: [
-    { label: "Years of Experience", value: "15+" },
-    { label: "Happy Clients", value: "2.2k" },
-    { label: "Projects Delivered", value: "2.3k" },
+    { label: "Client Products Launched", value: "65+" },
+    { label: "Global Industry Awards", value: "24+" },
+    { label: "Client Capital Raised", value: "$120M+" },
     { label: "Client Satisfaction Rate", value: "99.8%" }
   ],
   socials: {
     github: "https://github.com",
     twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",
-    email: "admin@ragadesigners.com",
-    logo: "/assets/logo.jpeg"
+    email: "admin@ragadesigners.com"
   }
 };
 
 export const PERSONAL_INFO = {
-  name: "RD Bytes",
-  title: "Spatial Web & Product Architecture Agency",
+  name: "Raga Designers",
+  title: "The Future of Brand Building",
   tagline: "Building world-class 3D web experiences, custom SaaS platforms & AI client products.",
-  bio: "Aetheria is an award-winning creative technology studio. We partner with visionaries, venture-backed startups, and global brands to design, engineer, and deploy transformative web products, 3D WebGL interfaces, and AI engines.",
+  bio: "Raga Designers is a full-service brand, web, and digital engineering studio transforming ideas into market-ready businesses. From strategic brand identity and visual design to high-performance websites, mobile applications, AI-powered solutions, digital marketing, and scalable business platforms, we deliver complete digital ecosystems that help brands launch, grow, and lead in competitive markets. Every project is crafted through a balance of creativity, technology, and measurable business impact.",
   location: "Chennai, IN",
   availableForHire: true,
   stats: AGENCY_INFO.stats,
@@ -309,7 +308,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   {
     id: 'chronos',
     title: 'CHRONOS // Cybernetic Financial Vault',
-    subtitle: 'Client: QuantX Trading Corp',
+    subtitle: 'Client: QuantX Trading',
     clientName: 'QuantX Trading Corp',
     clientIndustry: 'Fintech & Quantitative Trading',
     impactMetric: '$10M+ Daily Stream Volume',
@@ -337,7 +336,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   {
     id: 'hyperion',
     title: 'HYPERION // Spacecraft Flight Simulator',
-    subtitle: 'Client: AeroSpace Dynamics',
+    subtitle: 'Client: AeroSpace ',
     clientName: 'AeroSpace Dynamics',
     clientIndustry: 'Aerospace & Defense',
     impactMetric: '250,000+ Active Pilots',
@@ -357,10 +356,38 @@ export const PROJECTS_DATA: ProjectItem[] = [
       { label: 'Global Pilots', value: '250k+' }
     ],
     color: '#38bdf8',
-    portalPosition: [-4.5, 3, -7],
+    portalPosition: [-5, 2, -9],
     portalRotation: [0, 0.15, 0],
     accentHex: 0x38bdf8,
     featuredImgPlaceholder: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'nebulus',
+    title: 'NEBULUS // Generative AI Mesh Studio',
+    subtitle: 'Client: Lumina NFT Arts',
+    clientName: 'Lumina NFT Arts',
+    clientIndustry: 'AI & Digital Art',
+    impactMetric: '10,000+ Minted Sculptures',
+    year: '2025',
+    description: 'An AI-driven generative art client platform that combines Gemini AI prompts with procedural WebGL geometry generation to yield one-of-a-kind 3D digital sculptures.',
+    fullDetails: [
+      'Utilized Gemini API server-side routes to extract semantic vectors and drive procedural geometry parameters.',
+      'GLTF export pipeline directly in browser allowing instant 3D model downloading and AR viewing on mobile.',
+      'Over $1.2M volume generated in digital art minting drops.'
+    ],
+    technologies: ['React 19', 'Gemini API', 'Three.js', 'Node.js', 'Tailwind CSS'],
+    liveUrl: 'https://example.com/nebulus',
+    githubUrl: 'https://github.com',
+    metrics: [
+      { label: 'AI Synthesis', value: '< 2.1s' },
+      { label: 'Sculptures Minted', value: '10,000+' },
+      { label: 'GLTF Export', value: 'Native 3D' }
+    ],
+    color: '#facc15',
+    portalPosition: [4.5, 2, -10],
+    portalRotation: [0, -0.15, 0],
+    accentHex: 0xfacc15,
+    featuredImgPlaceholder: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'nebulus',
@@ -389,6 +416,34 @@ export const PROJECTS_DATA: ProjectItem[] = [
     portalRotation: [0, -0.15, 0],
     accentHex: 0xfacc15,
     featuredImgPlaceholder: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'hyperion',
+    title: 'HYPERION // Spacecraft Flight Simulator',
+    subtitle: 'Client: AeroSpace Dynamics',
+    clientName: 'AeroSpace Dynamics',
+    clientIndustry: 'Aerospace & Defense',
+    impactMetric: '250,000+ Active Pilots',
+    year: '2024',
+    description: 'A browser-based spacecraft flight simulator client product crafted for AeroSpace Dynamics, featuring Cannon.js physics, particle thruster dynamics, and dynamic terrain level-of-detail algorithms.',
+    fullDetails: [
+      'Designed custom quad-tree LOD terrain mesh generation to seamlessly transition from orbit to ground level.',
+      'Implemented rigid-body physics calculations for aerodynamics, inertia tensor, and gravitational vector fields.',
+      'Over 250,000 active global pilot sessions recorded in leaderboard database.'
+    ],
+    technologies: ['Three.js', 'Cannon.js', 'React', 'GLSL Shaders', 'Express API'],
+    liveUrl: 'https://example.com/hyperion',
+    githubUrl: 'https://github.com',
+    metrics: [
+      { label: 'Physics Loop', value: '120Hz' },
+      { label: 'Terrain Mesh', value: 'Procedural' },
+      { label: 'Global Pilots', value: '250k+' }
+    ],
+    color: '#38bdf8',
+    portalPosition: [-4.5, 2.3, -1],
+    portalRotation: [0, 0.15, 0],
+    accentHex: 0x38bdf8,
+    featuredImgPlaceholder: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80'
   }
 ];
 

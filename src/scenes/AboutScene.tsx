@@ -4,6 +4,7 @@ import { Html, Float } from '@react-three/drei';
 import * as THREE from 'three';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { soundEngine } from '../utils/audio';
+import logo from '../assets/logo.png';
 import { User, Terminal, Cpu, Award, Coffee, BookOpen, Laptop, Sparkles } from 'lucide-react';
 
 export function AboutScene() {
@@ -99,7 +100,7 @@ export function AboutScene() {
       <Html
         transform
         occlude={false}
-        position={[0, 0, 10]}
+        position={[0, 2, 10]}
         scale={0.5}
         className="pointer-events-auto"
       >
@@ -107,15 +108,19 @@ export function AboutScene() {
           {/* Header Bar */}
           <div className="flex items-center justify-between pb-5 border-b border-white/10 mb-6">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/20 flex items-center justify-center text-orange-400">
-                <User className="w-6 h-6" />
-              </div>
+              <div className="w-12 h-12 rounded-l bg-linear-to-br from-white to-white/5 border border-white/20 backdrop-blur-md flex items-center justify-center shadow-lg shadow-orange-500/10 overflow-hidden">
+                    <img
+                      src={logo}
+                      alt="Raga Designer Logo"
+                      className="w-10 h-10 object-contain"
+                    />
+                  </div>
               <div>
                 <h3 className="text-2xl font-serif italic text-white tracking-wide flex items-center gap-2">
                   {PERSONAL_INFO.name}
-                  <span className="text-xs px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-mono-code font-normal uppercase tracking-wider">
+                  {/* <span className="text-xs px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-mono-code font-normal uppercase tracking-wider">
                     ONLINE // ACTIVE
-                  </span>
+                  </span> */}
                 </h3>
                 <p className="text-xs text-orange-300/80 font-mono-code tracking-wider">{PERSONAL_INFO.title}</p>
               </div>
@@ -179,7 +184,7 @@ export function AboutScene() {
                   <Coffee className="w-5 h-5 text-orange-400" />
                   <div>
                     <span className="text-[10px] text-white/50 uppercase tracking-widest font-mono-code block">Specialty</span>
-                    <span className="text-xs font-semibold text-white">Real-Time 3D & WebGL</span>
+                    <span className="text-xs font-semibold text-white">Brand Architecture</span>
                   </div>
                 </div>
                 <div className="bg-white/5 p-4 rounded-2xl border border-white/10 flex items-center gap-3">
@@ -209,8 +214,8 @@ export function AboutScene() {
               <div className="p-4 bg-white/5 rounded-2xl border border-white/10 flex items-start gap-3.5">
                 <Laptop className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white font-serif italic text-base block mb-0.5">Fluid 60 FPS Performance First</strong>
-                  Every vertex, shader calculation, and render loop is optimized for butter-smooth framerates across all display formats.
+                  <strong className="text-white font-serif italic text-base block mb-0.5">We Build Brands That People Remember</strong>
+                 Every successful business begins with a memorable identity. We craft logos, visual systems, messaging, and brand guidelines that communicate your purpose with clarity and consistency across every touchpoint.
                 </div>
               </div>
               <div className="p-4 bg-white/5 rounded-2xl border border-white/10 flex items-start gap-3.5">
