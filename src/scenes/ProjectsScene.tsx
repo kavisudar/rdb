@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { PROJECTS_DATA } from '../data/portfolioData';
 import { ProjectItem } from '../types';
 import { soundEngine } from '../utils/audio';
-import { ExternalLink, Github, Layers, ArrowUpRight, CheckCircle, Sparkles, Building2, TrendingUp } from 'lucide-react';
+import { ExternalLink, Layers, ArrowUpRight, CheckCircle, Sparkles, Building2, TrendingUp } from 'lucide-react';
 
 interface ProjectsSceneProps {
   onSelectProject: (project: ProjectItem) => void;
@@ -39,7 +39,7 @@ export function ProjectsScene({ onSelectProject }: ProjectsSceneProps) {
 
       {/* Floating 3D HTML Header Banner for Client Products */}
       <Html
-        position={[0, 4, 7]}
+        position={[0, 2, 9]}
         center
         distanceFactor={19}
         className="pointer-events-none select-none"
@@ -154,7 +154,7 @@ function SingleProjectPortal({
 
         {/* Portal HTML Card Overlay */}
         <Html
-          position={[0, 0, 0.2]}
+          position={[0, 0, -2]}
           transform
           occlude={false}
           scale={0.38}

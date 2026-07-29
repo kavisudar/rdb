@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { SCENE_CONFIGS, PERSONAL_INFO, AGENCY_INFO } from '../../data/portfolioData';
 import { SkillItem, ProjectItem, AgencyService } from '../../types';
 import { soundEngine } from '../../utils/audio';
+import logo from '@/src/assets/logo.png';
 import {
   Volume2,
   VolumeX,
@@ -84,7 +85,10 @@ export function HUDOverlay({
             
             </div> */}
             <img 
-            src={AGENCY_INFO.socials.logo}
+            src={logo}
+            alt="Raga Designers"
+            className="w-11 h-11 rounded-l bg-linear-to-br from-orange-500/20 to-amber-500/10 border border-orange-500/30 backdrop-blur-xl flex items-center justify-center text-white font-serif italic text-2xl shadow-xl shadow-black/50"
+
             />
             <div>
               <h1 className="text-base md:text-lg font-serif italic tracking-wide text-white flex items-center gap-2">
@@ -377,7 +381,7 @@ export function HUDOverlay({
           <div className="w-full max-w-3xl glass-panel-glow p-6 md:p-8 rounded-3xl border border-white/20 text-white relative shadow-2xl my-8 max-h-[90vh] overflow-y-auto">
             <button
               onClick={onCloseProject}
-              className="absolute top-6 right-6 p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/70 hover:text-white transition-colors"
+              className="absolute top-6 z-1 right-6 p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/70 hover:text-white transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -389,7 +393,7 @@ export function HUDOverlay({
                 alt={selectedProject.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
               <div className="absolute bottom-4 left-6 right-6 flex items-end justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-1">
@@ -467,16 +471,6 @@ export function HUDOverlay({
               >
                 <span>LAUNCH DEMO PREVIEW</span>
                 <ArrowUpRight className="w-4 h-4 text-orange-600" />
-              </a>
-
-              <a
-                href={selectedProject.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-serif italic text-sm border border-white/20 flex items-center justify-center gap-2 transition-all"
-              >
-                <span>GITHUB REPO</span>
-                <Github className="w-4 h-4" />
               </a>
             </div>
           </div>
