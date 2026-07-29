@@ -1,0 +1,6 @@
+{
+  "name": "3D Portfolio Journey",
+  "description": "An immersive, cinematic 3D portfolio experience with interactive scroll-based camera exploration, floating environments, skills galaxy, project portals, interactive timeline, and console contact portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
