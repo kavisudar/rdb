@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { PROJECTS_DATA } from '../data/portfolioData';
 import { ProjectItem } from '../types';
 import { soundEngine } from '../utils/audio';
+
 import { ExternalLink, Layers, ArrowUpRight, CheckCircle, Sparkles, Building2, TrendingUp } from 'lucide-react';
 
 interface ProjectsSceneProps {
@@ -170,11 +171,12 @@ function SingleProjectPortal({
           >
             {/* Card Preview Image Header */}
             <div className="relative h-44 rounded-2xl overflow-hidden mb-4 border border-white/10 group-hover:border-orange-500/50 transition-colors">
-              <img
+              {/* <img
                 src={project.featuredImgPlaceholder}
                 alt={project.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              /> */}
+              <img src={project.featuredImgPlaceholder} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
               
               {/* Client Name Badge Top Left */}

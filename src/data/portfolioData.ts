@@ -1,5 +1,10 @@
 import { SceneConfig, SceneId, SkillItem, ProjectItem, TimelineStation, TestimonialItem, AgencyService } from '../types';
-
+import flexImg from '../assets/client/flex.png';
+import mhcImg from '../assets/client/mhc.png';
+import orangeImg from '../assets/client/orange.png';
+import rkImg from '../assets/client/rk.png';
+import man from '../assets/client/man.png';
+import lk from '../assets/client/lk.png';
 export const AGENCY_INFO = {
   name: "Raga Designers",
   tagline: "Next-Gen 3D Spatial Web, AI Systems & Digital Product Agency",
@@ -278,11 +283,11 @@ export const SKILLS_DATA: SkillItem[] = [
 
 export const PROJECTS_DATA: ProjectItem[] = [
   {
-    id: 'aetheria',
-    title: 'AETHERIA // 3D Spatial Sound Engine',
+    id: 'flx',
+    title: 'FLEXZO',
     subtitle: 'Client: Aether Sound Labs',
-    clientName: 'Aether Sound Labs',
-    clientIndustry: 'Audio Tech & Hardware',
+    clientName: 'FLEXZO',
+    clientIndustry: 'Career Development & Professional Networking',
     impactMetric: '120,000+ Active Listeners',
     year: '2025',
     description: 'A revolutionary client product engineered for Aether Sound Labs: an interactive 3D WebGL soundscape platform that renders real-time audio FFT frequencies into procedural 3D terrain landscapes.',
@@ -292,7 +297,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       'Implemented spatial HRTF audio positioning allowing users to navigate through sound sources in 3D space.'
     ],
     technologies: ['React 19', 'Three.js', 'Web Audio API', 'GLSL Shaders', 'Tailwind CSS'],
-    liveUrl: 'https://example.com/aetheria',
+    liveUrl: 'https://flexzo.in/',
     githubUrl: 'https://github.com',
     metrics: [
       { label: 'Audio Latency', value: '< 12ms' },
@@ -303,14 +308,14 @@ export const PROJECTS_DATA: ProjectItem[] = [
     portalPosition: [-4.5, 2, -17],
     portalRotation: [0, 0.2, 0],
     accentHex: 0xea580c,
-    featuredImgPlaceholder: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80'
+    featuredImgPlaceholder: flexImg
   },
   {
-    id: 'chronos',
-    title: 'CHRONOS // Cybernetic Financial Vault',
+    id: 'mhc',
+    title: 'MY HOLIDAYCLUB',
     subtitle: 'Client: QuantX Trading',
-    clientName: 'QuantX Trading Corp',
-    clientIndustry: 'Fintech & Quantitative Trading',
+    clientName: 'MY HOLIDAY CLUB',
+    clientIndustry: 'Travel & Tourism',
     impactMetric: '$10M+ Daily Stream Volume',
     year: '2025',
     description: 'A high-throughput 3D crypto asset matrix client product for QuantX Trading Corp, rendering multi-dimensional trading candlestick volumes as interactive holographic crystal towers in real time.',
@@ -320,7 +325,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       'Awarded FWA Site of the Day for groundbreaking financial visualization.'
     ],
     technologies: ['Next.js', 'React Three Fiber', 'WebSockets', 'GSAP', 'TypeScript'],
-    liveUrl: 'https://example.com/chronos',
+    liveUrl: 'https://www.myholidayclub.co.in/',
     githubUrl: 'https://github.com',
     metrics: [
       { label: 'Stream Throughput', value: '50k/sec' },
@@ -331,24 +336,23 @@ export const PROJECTS_DATA: ProjectItem[] = [
     portalPosition: [4.5, 2, -15],
     portalRotation: [0, -0.2, 0],
     accentHex: 0x818cf8,
-    featuredImgPlaceholder: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=800&q=80'
+    featuredImgPlaceholder: mhcImg
   },
   {
-    id: 'hyperion',
-    title: 'HYPERION // Spacecraft Flight Simulator',
+    id: 'oi',
+    title: 'ORANGE INTERIORS',
     subtitle: 'Client: AeroSpace ',
-    clientName: 'AeroSpace Dynamics',
-    clientIndustry: 'Aerospace & Defense',
+    clientName: 'ORANGE INTERIORS',
+    clientIndustry: 'Interior Design & Architecture',
     impactMetric: '250,000+ Active Pilots',
     year: '2024',
     description: 'A browser-based spacecraft flight simulator client product crafted for AeroSpace Dynamics, featuring Cannon.js physics, particle thruster dynamics, and dynamic terrain level-of-detail algorithms.',
     fullDetails: [
       'Designed custom quad-tree LOD terrain mesh generation to seamlessly transition from orbit to ground level.',
-      'Implemented rigid-body physics calculations for aerodynamics, inertia tensor, and gravitational vector fields.',
-      'Over 250,000 active global pilot sessions recorded in leaderboard database.'
+      'Implemented rigid-body physics calculations for aerodynamics, inertia tensor, and gravitational vector fields.'
     ],
     technologies: ['Three.js', 'Cannon.js', 'React', 'GLSL Shaders', 'Express API'],
-    liveUrl: 'https://example.com/hyperion',
+    liveUrl: 'https://www.orangeinterior.in/chennai',
     githubUrl: 'https://github.com',
     metrics: [
       { label: 'Physics Loop', value: '120Hz' },
@@ -359,14 +363,14 @@ export const PROJECTS_DATA: ProjectItem[] = [
     portalPosition: [-5, 2, -9],
     portalRotation: [0, 0.15, 0],
     accentHex: 0x38bdf8,
-    featuredImgPlaceholder: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80'
+    featuredImgPlaceholder: orangeImg
   },
   {
-    id: 'nebulus',
-    title: 'NEBULUS // Generative AI Mesh Studio',
+    id: 'rk',
+    title: 'RK GROUPS',
     subtitle: 'Client: Lumina NFT Arts',
-    clientName: 'Lumina NFT Arts',
-    clientIndustry: 'AI & Digital Art',
+    clientName: 'RK GROUPS',
+    clientIndustry: 'CONSTRUCTION & REAL ESTATE',
     impactMetric: '10,000+ Minted Sculptures',
     year: '2025',
     description: 'An AI-driven generative art client platform that combines Gemini AI prompts with procedural WebGL geometry generation to yield one-of-a-kind 3D digital sculptures.',
@@ -376,7 +380,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       'Over $1.2M volume generated in digital art minting drops.'
     ],
     technologies: ['React 19', 'Gemini API', 'Three.js', 'Node.js', 'Tailwind CSS'],
-    liveUrl: 'https://example.com/nebulus',
+    liveUrl: 'https://rkgroups.in/',
     githubUrl: 'https://github.com',
     metrics: [
       { label: 'AI Synthesis', value: '< 2.1s' },
@@ -387,14 +391,14 @@ export const PROJECTS_DATA: ProjectItem[] = [
     portalPosition: [4.5, 2, -10],
     portalRotation: [0, -0.15, 0],
     accentHex: 0xfacc15,
-    featuredImgPlaceholder: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=800&q=80'
+    featuredImgPlaceholder: rkImg
   },
   {
-    id: 'nebulus',
-    title: 'NEBULUS // Generative AI Mesh Studio',
+    id: 'man',
+    title: 'MANJELLA',
     subtitle: 'Client: Lumina NFT Arts',
-    clientName: 'Lumina NFT Arts',
-    clientIndustry: 'AI & Digital Art',
+    clientName: 'MANJELLA',
+    clientIndustry: 'COSMETICS',
     impactMetric: '10,000+ Minted Sculptures',
     year: '2025',
     description: 'An AI-driven generative art client platform that combines Gemini AI prompts with procedural WebGL geometry generation to yield one-of-a-kind 3D digital sculptures.',
@@ -415,14 +419,14 @@ export const PROJECTS_DATA: ProjectItem[] = [
     portalPosition: [4.5, 2, -5],
     portalRotation: [0, -0.15, 0],
     accentHex: 0xfacc15,
-    featuredImgPlaceholder: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=800&q=80'
+    featuredImgPlaceholder: man
   },
   {
-    id: 'hyperion',
-    title: 'HYPERION // Spacecraft Flight Simulator',
+    id: 'tnrb',
+    title: 'LK TRADERS',
     subtitle: 'Client: AeroSpace Dynamics',
-    clientName: 'AeroSpace Dynamics',
-    clientIndustry: 'Aerospace & Defense',
+    clientName: 'LK TRADERS',
+    clientIndustry: 'HANDICRAFT & EXPORTS',
     impactMetric: '250,000+ Active Pilots',
     year: '2024',
     description: 'A browser-based spacecraft flight simulator client product crafted for AeroSpace Dynamics, featuring Cannon.js physics, particle thruster dynamics, and dynamic terrain level-of-detail algorithms.',
@@ -432,7 +436,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       'Over 250,000 active global pilot sessions recorded in leaderboard database.'
     ],
     technologies: ['Three.js', 'Cannon.js', 'React', 'GLSL Shaders', 'Express API'],
-    liveUrl: 'https://example.com/hyperion',
+    liveUrl: 'https://ecommerce.tod360ai.com/store/lk-traders',
     githubUrl: 'https://github.com',
     metrics: [
       { label: 'Physics Loop', value: '120Hz' },
@@ -443,7 +447,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     portalPosition: [-4.5, 2.3, -1],
     portalRotation: [0, 0.15, 0],
     accentHex: 0x38bdf8,
-    featuredImgPlaceholder: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80'
+    featuredImgPlaceholder: lk
   }
 ];
 

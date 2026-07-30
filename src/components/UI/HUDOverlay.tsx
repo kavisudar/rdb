@@ -7,7 +7,6 @@ import {
   Volume2,
   VolumeX,
   Compass,
-  Github,
   ChevronRight,
   X,
   ExternalLink,
@@ -378,12 +377,12 @@ export function HUDOverlay({
       {/* Project Detail Inspection Modal */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black/90 backdrop-blur-2xl z-50 flex items-center justify-center p-4 font-sans animate-fadeIn overflow-y-auto">
-          <div className="w-full max-w-3xl glass-panel-glow p-6 md:p-8 rounded-3xl border border-white/20 text-white relative shadow-2xl my-8 max-h-[90vh] overflow-y-auto">
+          <div className="w-full max-w-3xl glass-panel-glow p-6 md:p-8 rounded-3xl border border-white/20 relative shadow-2xl my-8 max-h-[90vh] overflow-y-auto">
             <button
               onClick={onCloseProject}
-              className="absolute top-6 z-1 right-6 p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/70 hover:text-white transition-colors"
+              className="absolute top-6 right-1 z-1 p-2 rounded-xl bg-white hover:bg-white/25 border border-white/10 text-white/70 hover:text-white transition-colors"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 text-black" />
             </button>
 
             {/* Header Image */}
@@ -427,25 +426,26 @@ export function HUDOverlay({
 
             {/* Description & Full Details */}
             <div className="space-y-4 mb-6">
+              <h4 className="text-xs font-mono-code text-orange-400 uppercase tracking-widest">
+                  ARCHITECTURAL HIGHLIGHTS
+                </h4>
               <p className="text-sm text-white/80 leading-relaxed font-sans">
                 {selectedProject.description}
               </p>
 
               <div className="space-y-2">
-                <h4 className="text-xs font-mono-code text-orange-400 uppercase tracking-widest">
-                  ARCHITECTURAL HIGHLIGHTS
-                </h4>
-                {selectedProject.fullDetails.map((detail, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 text-xs text-white/80 bg-white/5 p-3.5 rounded-xl border border-white/10">
-                    <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span>{detail}</span>
-                  </div>
-                ))}
+                
+                {/* {selectedProject.fullDetails.map((detail, idx) => (
+                  // <div key={idx} className="flex items-start gap-2.5 text-xs text-white/80 bg-white/5 p-3.5 rounded-xl border border-white/10">
+                  //   <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  //   <span>{detail}</span>
+                  // </div>
+                ))} */}
               </div>
             </div>
 
             {/* Tech Tags */}
-            <div className="mb-8">
+            {/* <div className="mb-8">
               <h4 className="text-xs font-mono-code text-white/50 uppercase tracking-widest mb-3">
                 TECHNOLOGY STACK
               </h4>
@@ -459,7 +459,7 @@ export function HUDOverlay({
                   </span>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Links Row */}
             <div className="flex items-center gap-4">
@@ -469,7 +469,9 @@ export function HUDOverlay({
                 rel="noreferrer"
                 className="flex-1 py-3.5 rounded-xl bg-white hover:bg-orange-100 text-black font-serif italic font-bold text-sm text-center flex items-center justify-center gap-2 shadow-xl transition-all"
               >
-                <span>LAUNCH DEMO PREVIEW</span>
+                <a href={selectedProject.liveUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2">
+                  LAUNCH DEMO PREVIEW
+                </a>
                 <ArrowUpRight className="w-4 h-4 text-orange-600" />
               </a>
             </div>
